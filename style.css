@@ -1,0 +1,546 @@
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            background: #fff;
+            padding: 20px 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: baseline;
+            gap: 5px;
+        }
+
+        .logo-panda {
+            font-size: 32px;
+            font-weight: 800;
+            color: #e21b70;
+        }
+
+        .logo-ads {
+            font-size: 32px;
+            font-weight: 300;
+            color: #333;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 16px;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: #e21b70;
+        }
+
+        .nav-menu a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #e21b70;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .choose-location-btn {
+            background: #e21b70;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 50px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .choose-location-btn:hover {
+            background: #c91860;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(226, 27, 112, 0.3);
+        }
+
+        .search-icon {
+            font-size: 22px;
+            color: #333;
+            cursor: pointer;
+        }
+
+    
+        /* Hero Section */
+        .hero-section {
+            background: #000;
+            min-height: 600px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            padding: 80px 80px 80px 80px;
+            color: #fff;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 64px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 30px;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            color: #e0e0e0;
+            max-width: 550px;
+        }
+
+        .get-touch-btn {
+            background: #fff;
+            color: #e21b70;
+            padding: 18px 45px;
+            border: none;
+            border-radius: 50px;
+            font-size: 17px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 5px  rgba(255,255,255,0.2);
+        }
+
+        .get-touch-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0px 5px 5px rgba(255,255,255,0.3);
+        }
+
+        /* Boost Section */
+        .boost-section {
+            padding: 100px 80px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .boost-title {
+            font-size: 56px;
+            font-weight: 800;
+            color: #333;
+            line-height: 1.2;
+            max-width: 1100px;
+            margin: 0 auto 80px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 96px;
+            font-weight: 800;
+            color: #000;
+            line-height: 1;
+            margin-bottom: 15px;
+        }
+
+        .stat-label {
+            font-size: 20px;
+            font-weight: 400;
+            color: #333;
+        }
+
+        /* Power Up Section */
+        .power-section {
+            padding: 100px 80px;
+            background: #f5f5f5;
+        }
+
+        .power-title {
+            font-size: 48px;
+            font-weight: 800;
+            color: #333;
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .feature-icon {
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .feature-description {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.7;
+        }
+
+    
+
+        .customised-title {
+            font-size: 48px;
+            font-weight: 800;
+            color: #333;
+            line-height: 1.3;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 55px;
+            height: 55px;
+            background: #e21b70;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 24px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+            z-index: 999;
+            box-shadow: 0 5px 20px rgba(226, 27, 112, 0.4);
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            background: #c91860;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(226, 27, 112, 0.6);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-section {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-title {
+                font-size: 48px;
+            }
+
+            .boost-title {
+                font-size: 42px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 20px;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero-content {
+                padding: 60px 20px;
+            }
+
+            .hero-title {
+                font-size: 36px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .hero-image {
+                min-height: 400px;
+            }
+
+            .person-placeholder {
+                font-size: 120px;
+            }
+
+            .boost-section {
+                padding: 60px 20px;
+            }
+
+            .boost-title {
+                font-size: 32px;
+                margin-bottom: 50px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .stat-number {
+                font-size: 64px;
+            }
+
+            .stat-label {
+                font-size: 18px;
+            }
+
+            .power-section {
+                padding: 60px 20px;
+            }
+
+            .power-title {
+                font-size: 32px;
+                margin-bottom: 50px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+          
+            .customised-title {
+                font-size: 28px;
+            }
+        }
+            .menu-toggle {
+            display: none;
+            font-size: 24px;
+            color: #333;
+            cursor: pointer;
+        }
+
+@media (max-width: 768px) {
+
+    .nav-menu,
+    .choose-location-btn {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #ffffff;
+        width: 200px;
+        padding: 20px;
+        gap: 15px;
+        border-left: 2px solid #c91860;
+        border-bottom: 2px solid #c91860;
+    }
+
+    .choose-location-btn.active {
+        display: block;
+        position: absolute;
+        top: 350px;
+        right: 20px;
+        width: 160px;
+    }
+}
+
+    /* In-App Advertising Section */
+        .in-app-section {
+            padding: 100px 80px;
+            background: #fff;
+        }
+
+        .in-app-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .in-app-phones {
+            position: relative;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .in-app-phones img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .in-app-content {
+            padding-left: 40px;
+        }
+
+        .in-app-title {
+            font-size: 48px;
+            font-weight: 800;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        .in-app-description {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .explore-btn {
+            background: #e21b70;
+            color: #fff;
+            padding: 18px 45px;
+            border: none;
+            border-radius: 50px;
+            font-size: 17px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 10px 30px rgba(226, 27, 112, 0.3);
+        }
+
+        .explore-btn:hover {
+            background: #c91860;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(226, 27, 112, 0.5);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .boost-title {
+                font-size: 42px;
+            }
+
+            .stats-grid,
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 50px;
+            }
+
+            .in-app-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .boost-section,
+            .power-section,
+            .in-app-section {
+                padding: 60px 20px;
+            }
+
+            .boost-title {
+                font-size: 32px;
+                margin-bottom: 50px;
+            }
+
+            .stats-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .stat-number {
+                font-size: 64px;
+            }
+
+            .stat-label {
+                font-size: 18px;
+            }
+
+            .power-title {
+                font-size: 32px;
+                margin-bottom: 50px;
+            }
+
+            .in-app-phones {
+                height: 400px;
+            }
+
+            .in-app-content {
+                padding-left: 0;
+                text-align: center;
+            }
+
+            .in-app-title {
+                font-size: 32px;
+            }
+
+            .in-app-description {
+                font-size: 16px;
+            }
+        }
